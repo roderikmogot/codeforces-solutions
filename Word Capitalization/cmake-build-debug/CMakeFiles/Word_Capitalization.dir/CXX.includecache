@@ -1,0 +1,14 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/Roderik/Library/Mobile Documents/com~apple~CloudDocs/XCODE/CODEFORCES/Word Capitalization/main.cpp
+iostream
+-
+string
+-
+
