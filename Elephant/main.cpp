@@ -26,23 +26,26 @@
 #include <unordered_map>
 using namespace std;
 
-int main() {
-    int n;
-    cin >> n;
-    if(n %4 == 0 || n % 7 ==0 || n % 44 == 0|| n % 47 == 0 || n % 74 == 0
-        || n % 77 == 0 || n % 444 == 0 || n % 447 == 0 || n % 474 == 0
-            || n % 744 == 0 || n % 477 == 0 || n % 747 == 0 || n % 774 == 0 || n % 777 == 0)
-    {
-        cout << "YES";
-    }else{
-        string str = to_string(n);
-        str.erase(unique(str.begin(), str.end()), str.end());
-        if(str == "47"){
-            cout << "YES";
-        }else{
-            cout << "NO";
-        }
-    }
 
+int main() {
+    int in;
+    cin >> in;
+
+    int temp = 0;
+    while(in != 0){
+        if(in - 5 >= 0){
+            in -= 5;
+        }else if(in - 4 >= 0){
+            in -= 4;
+        }else if(in - 3 >= 0){
+            in -= 3;
+        }else if(in - 2 >= 0){
+            in -= 2;
+        }else if(in - 1 >= 0){
+            in -= 1;
+        }
+        temp++;
+    }
+    cout << temp;
     return 0;
 }
