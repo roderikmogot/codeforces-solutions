@@ -1,0 +1,3 @@
+/Users/Roderik/Library/Mobile Documents/com~apple~CloudDocs/XCODE/CODEFORCES/Anton and Danik/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/Roderik/Library/Mobile Documents/com~apple~CloudDocs/XCODE/CODEFORCES/Anton and Danik/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/Roderik/Library/Mobile Documents/com~apple~CloudDocs/XCODE/CODEFORCES/Anton and Danik/cmake-build-debug/CMakeFiles/Anton_and_Danik.dir
