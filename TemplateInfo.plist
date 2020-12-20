@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Kind</key>
+    <string>Xcode.Xcode3.ProjectTemplateUnitKind</string>
+    <key>Identifier</key>
+    <string>com.apple.dt.unit.commandLineTool</string>
+    <key>Ancestors</key>
+    <array>
+        <string>com.apple.dt.unit.base</string>
+        <string>com.apple.dt.unit.osxBase</string>
+    </array>
+    <key>Concrete</key>
+    <true/>
+    <key>SortOrder</key>
+    <integer>50</integer>
+    <key>Description</key>
+    <string>This template creates a command-line tool.</string>
+    <key>Targets</key>
+    <array>
+        <dict>
+            <key>ProductType</key>
+            <string>com.apple.product-type.tool</string>
+            <key>TargetIdentifier</key>
+            <string>com.apple.dt.commandLineToolTarget</string>
+            <key>BuildPhases</key>
+            <array>
+                <dict>
+                    <key>Class</key>
+                    <string>Sources</string>
+                </dict>
+                <dict>
+                    <key>Class</key>
+                    <string>Frameworks</string>
+                </dict>
+                <dict>
+                    <key>Class</key>
+                    <string>CopyFiles</string>
+                    <key>DstPath</key>
+                    <string>/usr/share/man/man1/</string>
+                    <key>DstSubfolderSpec</key>
+                    <string>0</string>
+                    <key>RunOnlyForDeploymentPostprocessing</key>
+                    <string>YES</string>
+                </dict>
+            </array>
+        </dict>
+    </array>
+    <key>Options</key>
+    <array>
+        <dict>
+            <key>Identifier</key>
+            <string>languageChoice</string>
+            <key>Name</key>
+            <string>Language:</string>
+            <key>Description</key>
+            <string>The primary implementation language for the command-line tool</string>
+            <key>Default</key>
+            <string>Swift</string>
+            <key>Type</key>
+            <string>popup</string>
+            <key>Values</key>
+            <array>
+                <string>Swift</string>
+                <string>Objective-C</string>
+                <string>C++</string>
+                <string>C</string>
+            </array>
+            <key>Units</key>
+            <dict>
+                <key>C</key>
+                <dict>
+                    <key>Nodes</key>
+                    <array>
+                        <string>main.c:comments</string>
+                        <string>main.c:include</string>
+                        <string>main.c:main:content</string>
+                    </array>
+                    <key>Definitions</key>
+                    <dict>
+                        <key>main.c:include</key>
+                        <string>#include &lt;stdio.h&gt;
+</string>
+                        <key>main.c:main:content</key>
+                        <string>// insert code here...
+printf(&quot;Hello, World!\n&quot;);
+return 0;
+</string>
+                    </dict>
+                </dict>
+                <key>C++</key>
+                <dict>
+                    <key>Nodes</key>
+                    <array>
+                        <string>main.cpp:comments</string>
+                        <string>main.cpp:include</string>
+                        <string>main.cpp:main:content</string>
+                    </array>
+                    <key>Definitions</key>
+                    <dict>
+                        <key>main.cpp:include</key>
+                        <string>
+//author: mipan
+// #include &lt;bits/stdc++.h&gt;
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+#include &lt;string&gt;
+#include &lt;cstring&gt;
+#include &lt;map&gt;
+#include &lt;set&gt;
+#include &lt;list&gt;
+#include &lt;cmath&gt;
+#include &lt;ctime&gt;
+#include &lt;chrono&gt;
+#include &lt;deque&gt;
+#include &lt;queue&gt;
+#include &lt;stack&gt;
+#include &lt;string&gt;
+#include &lt;bitset&gt;
+#include &lt;cstdio&gt;
+#include &lt;climits&gt;
+#include &lt;cstring&gt;
+#include &lt;cstdlib&gt;
+#include &lt;fstream&gt;
+#include &lt;numeric&gt;
+#include &lt;sstream&gt;
+#include &lt;algorithm&gt;
+#include &lt;cmath&gt;
+#include &lt;cstdio&gt;
+#include &lt;iomanip&gt;
+#include &lt;cstring&gt;
+#include &lt;unordered_map&gt;
+using namespace std;
+
+#define ll long long
+#define ld long double
+#define ar array
+#define vt vector
+#define pb push_back
+#define all(c) (c).begin(), (c).end()
+#define sz(x) (int)(x).size()
+#define for0(i,n) for(int i=0; i&lt;n; i++)
+#define each(x, a) for (auto&amp; x: a)
+
+#define F_OR(i, a, b, s) for (int i=(a); (s)&gt;0?i&lt;(b):i&gt;(b); i+=(s))
+#define F_OR1(e) F_OR(i, 0, e, 1)
+#define F_OR2(i, e) F_OR(i, 0, e, 1)
+#define F_OR3(i, b, e) F_OR(i, b, e, 1)
+#define F_OR4(i, b, e, s) F_OR(i, b, e, s)
+#define GET5(a, b, c, d, e, ...) e
+#define F_ORC(...) GET5(__VA_ARGS__, F_OR4, F_OR3, F_OR2, F_OR1)
+#define FOR(...) F_ORC(__VA_ARGS__)(__VA_ARGS__)
+
+template&lt;class A&gt; void read(vt&lt;A&gt;&amp; v);
+template&lt;class A, size_t S&gt; void read(ar&lt;A, S&gt;&amp; a);
+template&lt;class T&gt; void read(T&amp; x) {
+    cin &gt;&gt; x;
+}
+void read(double&amp; d) {
+    string t;
+    read(t);
+    d=stod(t);
+}
+void read(long double&amp; d) {
+    string t;
+    read(t);
+    d=stold(t);
+}
+template&lt;class H, class... T&gt; void read(H&amp; h, T&amp;... t) {
+    read(h);
+    read(t...);
+}
+template&lt;class A&gt; void read(vt&lt;A&gt;&amp; x) {
+    each(a, x)
+        read(a);
+}
+template&lt;class A, size_t S&gt; void read(array&lt;A, S&gt;&amp; x) {
+    each(a, x)
+        read(a);
+}
+string to_string(char c) {
+    return string(1, c);
+}
+string to_string(bool b) {
+    return b?"true":"false";
+}
+string to_string(const char* s) {
+    return string(s);
+}
+string to_string(string s) {
+    return s;
+}
+string to_string(vt&lt;bool&gt; v) {
+    string res;
+    FOR(sz(v))
+        res+=char('0'+v[i]);
+    return res;
+}
+template&lt;size_t S&gt; string to_string(bitset&lt;S&gt; b) {
+    string res;
+    FOR(S)
+        res+=char('0'+b[i]);
+    return res;
+}
+template&lt;class T&gt; string to_string(T v) {
+    bool f=1;
+    string res;
+    each(x, v) {
+        if(!f)
+            res+=' ';
+        f=0;
+        res+=to_string(x);
+    }
+    return res;
+}
+template&lt;class A&gt; void write(A x) {
+    cout &lt;&lt; to_string(x);
+}
+template&lt;class H, class... T&gt; void write(const H&amp; h, const T&amp;... t) {
+    write(h);
+    write(t...);
+}
+void print() {
+    write("\n");
+}
+template&lt;class H, class... T&gt; void print(const H&amp; h, const T&amp;... t) {
+    write(h);
+    if(sizeof...(t))
+        write(' ');
+    print(t...);
+}
+void DBG() {
+    cerr &lt;&lt; "]" &lt;&lt; endl;
+}
+template&lt;class H, class... T&gt; void DBG(H h, T... t) {
+    cerr &lt;&lt; to_string(h);
+    if(sizeof...(t))
+        cerr &lt;&lt; ", ";
+    DBG(t...);
+}
+#ifdef _DEBUG
+#define dbg(...) cerr &lt;&lt; "LINE(" &lt;&lt; __LINE__ &lt;&lt; ") -&gt; [" &lt;&lt; #__VA_ARGS__ &lt;&lt; "]: [", DBG(__VA_ARGS__)
+#else
+#define dbg(...) 0
+#endif
+
+void solve() {
+
+}
+                        </string>
+
+                        <key>main.cpp:main:content</key>
+
+                        <string>ios::sync_with_stdio(0);
+cin.tie(0);
+solve();
+return 0;
+</string>
+                    </dict>
+                </dict>
+                <key>Objective-C</key>
+                <dict>
+                    <key>Nodes</key>
+                    <array>
+                        <string>main.m:comments</string>
+                        <string>main.m:include</string>
+                        <string>main.m:main:content</string>
+                    </array>
+                    <key>Definitions</key>
+                    <dict>
+                        <key>main.m:include</key>
+                        <string>#import &lt;Foundation/Foundation.h&gt;
+</string>
+                        <key>main.m:main:content</key>
+                        <string>@autoreleasepool {
+
+    NSLog(@&quot;Hello, World!&quot;);
+}
+return 0;
+</string>
+                    </dict>
+                </dict>
+                <key>Swift</key>
+                <dict>
+                    <key>Project</key>
+                    <dict>
+                        <key>Configurations</key>
+                        <dict>
+                            <key>Debug</key>
+                            <dict>
+                                <key>SWIFT_OPTIMIZATION_LEVEL</key>
+                                <string>-Onone</string>
+                            </dict>
+                            <key>Release</key>
+                            <dict>
+                                <key>SWIFT_COMPILATION_MODE</key>
+                                <string>wholemodule</string>
+                                <key>SWIFT_OPTIMIZATION_LEVEL</key>
+                                <string>-O</string>
+                            </dict>
+                        </dict>
+                    </dict>
+                    <key>Targets</key>
+                    <array>
+                        <dict>
+                            <key>SharedSettings</key>
+                            <dict>
+                                <key>SWIFT_VERSION</key>
+                                <string>5.0</string>
+                            </dict>
+                        </dict>
+                    </array>
+                    <key>Nodes</key>
+                    <array>
+                        <string>main.swift:comments</string>
+                        <string>main.swift:include</string>
+                        <string>main.swift:main:content</string>
+                    </array>
+                    <key>Definitions</key>
+                    <dict>
+                        <key>main.swift:include</key>
+                        <string>import Foundation
+</string>
+                        <key>main.swift:main</key>
+                        <dict>
+                            <key>Beginning</key>
+                            <string></string>
+                            <key>End</key>
+                            <string></string>
+                        </dict>
+                        <key>main.swift:main:content</key>
+                        <string>print(&quot;Hello, World!&quot;)
+</string>
+                    </dict>
+                </dict>
+            </dict>
+        </dict>
+    </array>
+    <key>Definitions</key>
+    <dict>
+        <key>*:main</key>
+        <dict>
+            <key>Beginning</key>
+            <string>int main() {</string>
+            <key>End</key>
+            <string>}</string>
+            <key>Indent</key>
+            <integer>1</integer>
+        </dict>
+    </dict>
+</dict>
+</plist>
