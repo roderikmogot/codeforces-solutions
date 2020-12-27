@@ -162,9 +162,3 @@ int main() {
     solve();
     return 0;
 }
-
-/* on ASCII table :
-capital letter => small one : +32
-vise versa : -32
-capital range : [65 , 90]
-small range : [97 , 122] */
