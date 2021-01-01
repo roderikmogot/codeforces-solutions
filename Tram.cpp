@@ -1,11 +1,3 @@
-//
-//  main.cpp
-//  Travelling Salesman
-//
-//  Created by Roderik Mogot on 24/12/20.
-//
-
-
 //author: mipan
 // #include <bits/stdc++.h>
 #include <iostream>
