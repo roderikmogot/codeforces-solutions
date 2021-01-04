@@ -150,20 +150,6 @@ int __gcd(int a, int b){
 }
  
 void solve(){
-//    int t;
-//    read(t);
-//    while(t--){
-//        int a,b,c;
-//        read(a,b,c);
-//        int d = 0;
-//        while(d!=c){
-//            if(a%2==0 && b%2!=0){a = (a/2) * b;d++;}
-//            else if(a%2!=0 && b%2==0){b = (b/2)*a;d++;}
-//            else if(a%2!=0 && b%2!=0){d++;break;}
-//        }
-//        if(d>=c)print("YES");
-//        else if(d < c)print("NO");
-//    }
     int t;
     read(t);
     while(t--){
@@ -173,10 +159,7 @@ void solve(){
         read(candies);
         sort(all(candies),greater<>());
         int res=0;
-        FOR(total){
-            (res<=0) ? res+=candies[i] : res -= candies[i];
-        }
-
+        FOR(total)(res<=0) ? res+=candies[i] : res -= candies[i];
         if(res==0)print("YES");
         else print("NO");
     }
