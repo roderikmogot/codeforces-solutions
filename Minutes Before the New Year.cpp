@@ -151,9 +151,7 @@ void solve(){
     while(t--){
         int h, m;
         read(h,m);
-        int total_hrs_in_min = h * 60;
-        int res = total_hrs_in_min + m;
-        print(1440-res);
+        print(1440-((h*60)+m));
     }
     //cerr << "time elapsed : " << 1.0 * clock() / CLOCKS_PER_SEC << " sec \n";
 }
