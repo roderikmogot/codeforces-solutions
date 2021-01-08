@@ -148,7 +148,7 @@ void solve() {
     int t;
     read(t);
     
-    ll min=0, num=0, ct=1;
+    ll min=0, max_inc_subs=0, ct=1;
     while(t--){
         ll a;
         read(a);
@@ -160,10 +160,10 @@ void solve() {
             ct = 1;
         }
         min = a;
-        num = max(ct,num);
+        max_inc_subs = max(ct,max_inc_subs);
         
     }
-    print(num);
+    print(max_inc_subs);
     //cerr << "time elapsed : " << 1.0 * clock() / CLOCKS_PER_SEC << " sec \n";
 }
                         
