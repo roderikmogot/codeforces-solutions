@@ -144,26 +144,6 @@ template<class H, class... T> void DBG(H h, T... t) {
 #define dbg(...) 0
 #endif
 
-int max_el(vt<int>& f){
-    int ml = 0;
-    each(x,f){
-        ml = max(x,ml);
-    }
-    return ml;
-}
-
-int getIndex(vector<int> v, int K)
-{
-    auto it = find(v.begin(), v.end(), K);
-
-    if (it != v.end())
-    {
-        int index = it - v.begin();
-        return index;
-    }
-    return -1;
-}
-
 void solve() {
     int i = 0, t, c = 0, chest = 0, biceps = 0, back = 0;
     read(t);
