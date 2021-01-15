@@ -22,6 +22,8 @@
 #include <fstream>
 #include <numeric>
 #include <sstream>
+#include <random>
+#include <cassert>
 #include <algorithm>
 #include <cmath>
 #include <cstdio>
@@ -38,6 +40,7 @@ using namespace std;
 #define all(c) (c).begin(), (c).end()
 #define sz(x) (int)(x).size()
 #define for0(i,n) for(int i=0; i<n; i++)
+#define for1(i,n) for(int i=1; i<=n; i++)
 #define each(x, a) for (auto& x: a)
 
 #define F_OR(i, a, b, s) for (int i=(a); (s)>0?i<(b):i>(b); i+=(s))
@@ -142,11 +145,26 @@ template<class H, class... T> void DBG(H h, T... t) {
 #define dbg(...) 0
 #endif
 
-void solve() {
-  
-  
+int __lcm(int a, int b){
+    int mx = max(a,b);
+    do
+    {
+        if (mx % a == 0 && mx % b == 0)
+        {
+            return mx;
+            break;
+        }
+        else
+            ++mx;
+        } while (true);
 }
-                        
+
+void solve() {
+    //enter solution
+    
+    //cerr << "time elapsed : " << 1.0 * clock() / CLOCKS_PER_SEC << " sec \n";
+}
+
 int main() {
     ios::sync_with_stdio(0);
     cin.tie(0);
