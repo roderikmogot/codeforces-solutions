@@ -179,7 +179,7 @@ void solve() {
         else continue;
     }
     int sum = 0;
-    each(i,store){sum+=i;print(i);}
+    each(i,store)sum+=i;
     print(sum);
     cerr << "time elapsed : " << 1.0 * clock() / CLOCKS_PER_SEC << " sec \n";
 }
