@@ -162,8 +162,6 @@ void solve() {
     }
     print(mx);
     cerr << "time elapsed : " << 1.0 * clock() / CLOCKS_PER_SEC << " sec \n";
-    
-    //cerr << "time elapsed : " << 1.0 * clock() / CLOCKS_PER_SEC << " sec \n";
 }
 
 int main() {
