@@ -1,4 +1,4 @@
-//author: mipan
+//author: .rod.
 // #include <bits/stdc++.h>
 #include <iostream>
 #include <vector>
