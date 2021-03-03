@@ -1,4 +1,4 @@
-//author: ...
+//author: rod
 //#include <bits/stdc++.h>
 #include <iostream>
 #include <vector>
@@ -156,7 +156,7 @@ void solve() {
     int min_row_check = m[temp_row][0], min_col_check = m[0][temp_col];
     int s = 0, t = 0;
     
-    //col first
+    //first, col
     for0(i, rows_column*rows_column){
         if(min_col_check < m[t][temp_col]){
             min_col_check = m[t][temp_col];
@@ -173,7 +173,7 @@ void solve() {
     
     print();
     
-    //rows second
+    // second, row
     for0(i, rows_column*rows_column){
         if(min_row_check < m[temp_row][s]){
             min_row_check = m[temp_row][s];
