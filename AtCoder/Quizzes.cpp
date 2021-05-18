@@ -1,3 +1,4 @@
+// author: .rod.
 #include <iostream>
 #include <cstring>
 #include <string>
